@@ -1,10 +1,9 @@
-use axum::{async_trait, Router as AxumRouter};
 use axum_tracing_opentelemetry::middleware::{OtelAxumLayer, OtelInResponseLayer};
-use loco_rs::{
-    app::{AppContext, Initializer},
-    Error, Result,
-};
+use async_trait::async_trait;
+use axum::Router as AxumRouter;
+use loco_rs::prelude::*;
 
+#[allow(clippy::module_name_repetitions)]
 pub struct OpenTelemetryInitializer;
 
 #[async_trait]
